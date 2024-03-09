@@ -101,13 +101,17 @@ function checkOrder() {
   });
   if (list_sorted) {
     sorted_once = true;
-    document.querySelector(".check-btn").innerText = "List Sorted Successfully";
+    document.querySelector(".check-btn").innerHTML = `
+    <button id="check" class="check-btn">
+      List Sorted <i class="fa-solid fa-check" style="color: #0033cc;"></i>
+    </button>
+  `;
   } else {
     if (sorted_once == true) {
       console.log("Sorted Once");
       document.querySelector(".check-btn").innerHTML = `
         <button id="check" class="check-btn">
-          Check Order Again <i class="fa-solid fa-paper-plane "></i>
+          Check Order Again<i class="fa-solid fa-user-secret"></i>
         </button>
       `;
     }
