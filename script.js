@@ -80,8 +80,8 @@ function swapItems(fromIndex, toIndex) {
   listItems[toIndex].appendChild(itemOne);
 }
 
+let sorted_once = false;
 function checkOrder() {
-  let sorted_once = false;
   // let count = 0;
   listItems.forEach((listItem, index) => {
     const personName = listItem.querySelector(".draggable").innerText.trim();
@@ -101,12 +101,12 @@ function checkOrder() {
   });
   if (list_sorted) {
     sorted_once = true;
-    console.log("List Sorted");
-    console.log(document.querySelector(".check-btn").innerText);
     document.querySelector(".check-btn").innerText = "List Sorted Successfully";
   } else {
-    if (sorted_once)
+    if (sorted_once == true) {
+      console.log("Sorted Once");
       document.querySelector(".check-btn").innerText = "Check Order Again";
+    }
   }
 }
 
