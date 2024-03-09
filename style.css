@@ -19,6 +19,8 @@ body{
     font-family: "Poppins";
     font-size: 1.5em;
 }
+
+.draggable-list li:nth-child(odd) { background: rgb(255, 255, 255); } 
 .draggable-list{
     border: 1px solid var(--border-color);
     color: var(--text-color);
@@ -27,8 +29,10 @@ body{
     
 }
 .draggable-list li{
-    background-color: #ffffff;
+    background-color: #f1e7e7ea;
     display:flex;
+    /* background: green; */
+    /* background:nth-child(odd) { background: red; } */
     /* flex:1; */
 }
 .draggable-list li:not(:last-of-type){
@@ -49,7 +53,7 @@ body{
 
 }
 .draggable-list li.right .person-name{
-    color:#3ae374
+    color:#02c242
 
 }
 .draggable-list li.wrong .person-name{
@@ -78,6 +82,7 @@ body{
     cursor:pointer;
     padding: 10px,20px;
     font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 2px 4px rgb(62, 181, 181);
 }
 .check-btn active{
     transform: scale(0.6);
