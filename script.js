@@ -104,6 +104,7 @@ function checkOrder() {
     document.querySelector(".check-btn").innerText = "List Sorted Successfully";
   } else {
     console.log("List Unsorted");
+    document.querySelector(".check-btn").innerText = "Check Order Again";
   }
 }
 
