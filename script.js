@@ -105,7 +105,11 @@ function checkOrder() {
   } else {
     if (sorted_once == true) {
       console.log("Sorted Once");
-      document.querySelector(".check-btn").innerText = "Check Order Again";
+      document.querySelector(".check-btn").innerHTML = `
+        <button id="check" class="check-btn">
+          Check Order Again <i class="fa-solid fa-paper-plane "></i>
+        </button>
+      `;
     }
   }
 }
